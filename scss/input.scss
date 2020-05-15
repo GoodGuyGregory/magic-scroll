@@ -11,9 +11,18 @@ body {
     background-color: #000;
 }
 
+h1 {
+    margin-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff ;
+    text-align: center;
+}
+
+
 .wrapper{
     display: grid;
     grid-template-columns: repeat(3, 100%);
+    margin-top: 3em;
 
     section {
         width: 100%;
@@ -25,9 +34,19 @@ body {
 
         .item {
             padding: 15px 5px 15px;
+            transition: $duration;
 
             &:nth-of-type(1) {
                 margin-left: 55px;
+            }
+
+            
+
+            &:hover {
+                margin: 0 25px;
+                transform: scale($itemGrow) rotate(5deg);
+                
+
             }
         }
 
