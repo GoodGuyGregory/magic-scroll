@@ -9,22 +9,24 @@ body {
 .wrapper section {
   width: 100%;
   position: relative;
+  align-self: center;
   display: grid;
   grid-template-columns: repeat(7, auto);
   margin: 20px 0;
 }
 .wrapper section .item {
-  padding: 5px;
+  padding: 5px 0 5px;
+}
+.wrapper section .item:nth-of-type(1) {
+  margin-left: 55px;
 }
 .wrapper section a {
   position: absolute;
   color: #fff;
   text-decoration: none;
   font-size: 6em;
-  background: black;
   width: 80px;
-  padding: 20px;
-  text-align: center;
+  padding: 64px 10px;
   z-index: 1;
 }
 .wrapper section a:nth-of-type(1) {
