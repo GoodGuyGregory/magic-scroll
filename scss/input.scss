@@ -4,6 +4,7 @@ $duration: 250ms;
 
 html {
     scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
 }
 
 body {
@@ -25,6 +26,7 @@ h1 {
     margin-top: 3em;
 
     section {
+        scroll-snap-align: start;
         width: 90%;
         position: relative;
         align-self: center;
@@ -33,10 +35,7 @@ h1 {
         grid-template-rows: 260px;
         grid-gap: 10px;
         margin: 10px 10px 10px 10px;
-        
-        &:nth-of-type(1) {
-            margin: 20px 10px 10px 10px;
-        }
+        // scroll-padding-left: -10px;
 
         .item {
             padding: 15px 5px 15px;
@@ -66,7 +65,6 @@ h1 {
                 top:0;
                 bottom: 0;
                 left: 0;
-                
                 background: linear-gradient(-90deg, rgba(0,0,0, 0) 26%, rgba(0,0,0,1) 100%);
             }
 
