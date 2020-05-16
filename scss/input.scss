@@ -4,6 +4,7 @@ $duration: 250ms;
 
 html {
     scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
 }
 
 body {
@@ -11,23 +12,40 @@ body {
     background-color: #000;
 }
 
+h1 {
+    margin-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff ;
+    text-align: center;
+}
+
+
 .wrapper{
     display: grid;
     grid-template-columns: repeat(3, 100%);
+    margin-top: 3em;
 
     section {
-        width: 100%;
+        scroll-snap-align: start;
+        width: 90%;
         position: relative;
         align-self: center;
         display: grid;
-        grid-template-columns: repeat(7, auto);
-        margin: 20px 0;
+        grid-template-columns: repeat(5, 260px);
+        grid-template-rows: 260px;
+        grid-gap: 10px;
+        margin: 10px 10px 10px 10px;
 
         .item {
             padding: 15px 5px 15px;
+            transition: $duration;
 
-            &:nth-of-type(1) {
-                margin-left: 55px;
+            &:hover {
+                margin: 0 25px;
+                transform: scale($itemGrow) rotate(5deg);
+                cursor: pointer;
+                z-index: 2;
+
             }
         }
 
@@ -37,8 +55,8 @@ body {
             text-decoration: none;
             font-size: 3em;
             // background: rgb(0,0,0);
-            width: 80px;
-            padding: 95px 10px;
+            width: 70px;
+            padding: 250px 15px;
             // text-align: center;
             z-index: 1;
 
@@ -46,14 +64,13 @@ body {
                 top:0;
                 bottom: 0;
                 left: 0;
-                
                 background: linear-gradient(-90deg, rgba(0,0,0, 0) 26%, rgba(0,0,0,1) 100%);
             }
 
             &:nth-of-type(2) {
                 top:0;
                 bottom: 0;
-                right: 0;
+                right: -116px;
                 background: linear-gradient(90deg, rgba(0,0,0, 0) 26%, rgba(0,0,0,1) 100%);
             }
         }
