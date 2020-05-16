@@ -25,27 +25,23 @@ h1 {
     margin-top: 3em;
 
     section {
-        width: 100%;
+        width: 80%;
         position: relative;
         align-self: center;
         display: grid;
-        grid-template-columns: repeat(7, auto);
+        grid-template-columns: repeat(5, 260px);
+        grid-template-rows: 260px;
+        grid-gap: 16px;
         margin: 20px 0;
 
         .item {
             padding: 15px 5px 15px;
             transition: $duration;
 
-            &:nth-of-type(1) {
-                margin-left: 55px;
-            }
-
-            
-
             &:hover {
                 margin: 0 25px;
                 transform: scale($itemGrow) rotate(5deg);
-                
+                cursor: pointer;
 
             }
         }
@@ -57,7 +53,7 @@ h1 {
             font-size: 3em;
             // background: rgb(0,0,0);
             width: 80px;
-            padding: 95px 10px;
+            padding: 250px 15px;
             // text-align: center;
             z-index: 1;
 
